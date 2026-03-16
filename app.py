@@ -2,7 +2,7 @@ from flask import Flask, request, redirect
 import psycopg2
 import os
 import time
-
+from livereload import Server 
 app = Flask(__name__)
 
 def db_baglantisi():
@@ -42,7 +42,7 @@ def ana_sayfa():
     conn.close()
 
     html = """
-        <h1>Not Defteri</h1>
+        <h1>Notlar asd</h1>
         <form method="POST" action="/not-ekle">
             <input name="baslik" placeholder="Baslik" required><br><br>
             <textarea name="icerik" placeholder="Icerik" required></textarea><br><br>

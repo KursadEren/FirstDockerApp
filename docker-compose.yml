@@ -5,6 +5,11 @@ services:
       - "5000:5000"
     env_file:
       - .env
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
     depends_on:
       - db
 
