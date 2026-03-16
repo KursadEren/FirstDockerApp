@@ -1,21 +1,17 @@
-version: "3.9"
-
 services:
   web:
     build: .
     ports:
       - "5000:5000"
-    environment:
-      - DATABASE_URL=postgresql://kullanici:sifre@db:5432/uygulamam
+    env_file:
+      - .env
     depends_on:
       - db
 
   db:
     image: postgres:15
-    environment:
-      POSTGRES_USER: kullanici
-      POSTGRES_PASSWORD: sifre
-      POSTGRES_DB: uygulamam
+    env_file:
+      - .env
     volumes:
       - pgdata:/var/lib/postgresql/data
 
