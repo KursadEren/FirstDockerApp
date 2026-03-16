@@ -37,7 +37,7 @@ def tablo_olustur():
 @app.route("/")
 def ana_sayfa():
     return """
-        <h1>Not Defteri</h1>
+        <h1>Not Defteri v2 v2</h1>
         <form method="POST" action="/not-ekle">
             <input name="baslik" placeholder="Baslik" required><br><br>
             <textarea name="icerik" placeholder="Icerik" required></textarea><br><br>
